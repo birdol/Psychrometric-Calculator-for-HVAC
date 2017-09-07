@@ -1,0 +1,12 @@
+clc,clear
+B=101325;
+dmax=30;
+dd=5;
+tmin=0;
+dt=5;
+tmax=50;
+%最后一个数字输入0的话，是中国焓湿图，否则是ASHRAE焓湿图。
+ID=idDiag(tmin,tmax,dt,dmax,dd);
+ID.Drawid;%根据输入的温度和相对湿度把点画在焓湿图上
+A=[25,50;27,35;22,50];
+ID.drawPoints(A);
