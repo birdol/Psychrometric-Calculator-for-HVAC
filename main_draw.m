@@ -5,8 +5,10 @@ dd=5;
 tmin=0;
 dt=5;
 tmax=50;
-%���һ����������0�Ļ������й���ʪͼ��������ASHRAE��ʪͼ��
-ID=idDiag(tmin,tmax,dt,dmax,dd);
-ID.Drawid;%����������¶Ⱥ����ʪ�Ȱѵ㻭����ʪͼ��
+%最后一个数字输入0的话，是中国焓湿图，否则是ASHRAE焓湿图。
+ID=idDiag(tmin,tmax,dt,dmax,dd,1);
+ID.Drawid;
+%根据输入的温度和相对湿度把点画在焓湿图上
+%A的第一列是干球温度，第二列是相对湿度
 A=[25,50;27,35;22,50];
 ID.drawPoints(A);
