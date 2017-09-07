@@ -1,5 +1,5 @@
 classdef PsyCal
-    %PsychrometricCalculator Êª¿ÕÆø¼ÆËãÀà
+    %PsychrometricCalculator 
     properties
         B;
         Ta;
